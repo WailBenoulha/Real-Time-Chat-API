@@ -21,6 +21,7 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
+from chat.views import list_user_view
 
 
 urlpatterns = [
@@ -28,5 +29,6 @@ urlpatterns = [
     path('register',RegisterView,name='register'),
     # path('login', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     # path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('login',login,name='login')
+    path('login',login,name='login'),
+    path('api/users',list_user_view,name='users'),
 ]

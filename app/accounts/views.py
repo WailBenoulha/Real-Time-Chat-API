@@ -4,6 +4,7 @@ from .serializers import UserSerializer,LoginSerializer
 from .tokenauthentication import JWTAuthentication
 from rest_framework import status
 
+
 @api_view(['POST'])
 def RegisterView(request):
     serializer=UserSerializer(data=request.data)
